@@ -29,6 +29,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
+    * [Meta tags](#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -352,6 +353,37 @@ You can enable it in the configuration file.
     title = "From our blog"
     subtitle = "Pellen
 ```
+
+
+#### Meta tags
+
+`Description` and `Keywords` meta tags are available and can be customized.
+You can set default values for all pages in the `config.toml` file as below.
+
+```toml
+[params]
+    defaultKeywords = ["devcows", "hugo", "go"]
+    defaultDescription = "Site template made by Devcows using Hugo"
+```
+
+The result in HTML will be the following.
+
+```html
+<meta name="keywords" content="devcows, hugo, go">
+<meta name="description" content="Site template made by Devcows using Hugo">
+```
+
+You can also override the default values from the `config.toml` by setting the `description` and `keywords` in the individual pages meta data.
+See the `faq.md` file in the `exampleSite` directory for an example.
+
+```yaml
++++
+title = "FAQ"
+description = "Frequently asked questions"
+keywords = ["FAQ","How do I","questions","what if"]
++++
+```
+
 
 ## Usage
 

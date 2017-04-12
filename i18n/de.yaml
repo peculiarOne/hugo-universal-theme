@@ -11,7 +11,7 @@
   translation: "Zur Kontakt Seite"
 
 - id: contactAddrTitle
-  translation: "Addresse"
+  translation: "Adresse"
 
 - id: contactTitle
   translation: "Kontakt"
@@ -60,4 +60,10 @@
 
 - id: aboutUs
   translation: "Über uns"
+
+- id: newer
+  translation: "Neuer"
+
+- id: older
+  translation: "Älter"
 
