@@ -9,6 +9,10 @@ Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.gith
 Sponsor this project:
 - [https://paypal.me/ryanfox1985](https://paypal.me/ryanfox1985)
 - [https://www.patreon.com/ryanfox1985](https://www.patreon.com/ryanfox1985)
+- BTC wallet
+```
+1My6zRZA4YKdX78aiZKZhWUWfFmCSDafZ6
+```
 
 This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
 
@@ -74,7 +78,7 @@ $ cd themes
 $ git clone https://github.com/devcows/hugo-universal-theme
 ```
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+For more information read the official [setup guide](https://gohugo.io/installation/) of Hugo.
 
 
 ## Configuration
@@ -109,10 +113,12 @@ There is the possibility to override the CSS and set your custom styles, overrid
 The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
 
 ```toml
-disqusShortname = "devcows"
+[services]
+[services.disqus]
+Shortname = "devcows"
 ```
 
-You can disable the comments system by leaving the `disqusShortname` empty.
+You can disable the comments system by leaving the `Shortname` empty.
 
 
 ### Google Analytics
@@ -120,10 +126,12 @@ You can disable the comments system by leaving the `disqusShortname` empty.
 You can optionally enable Google Analytics. Type your tracking code in the ``.
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+[services]
+[services.googleAnalytics]
+id = "UA-XXXXX-X"
 ```
 
-Leave the `googleAnalytics` key empty to disable it.
+Leave the `id` key empty to disable it.
 
 ### Logo
 
